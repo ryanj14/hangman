@@ -1,0 +1,62 @@
+h1 {
+  text-align: center;
+}
+
+#border {
+  height: 570px;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  border: 2px solid red;
+}
+
+#wrap {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#guess {
+  text-align: center;
+}
+
+#def {
+  text-align: center;
+}
+
+#border
+h2 {
+  text-align: center;
+}
+
+#word {
+  text-align: center;
+}
+
+#rowButtons {
+  width: 90%;
+  margin-top: 5%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#rowButtons
+button {
+  height: 50px;
+  width: 50px;
+  margin: 1%;
+}
+
+#reset{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.move{
+  width: 10%;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+}
