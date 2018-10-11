@@ -37,7 +37,7 @@
           } else {
             echo "<form class='form-inline' action='login.php' method='POST'>";
             echo "<input class='form-control mr-sm-2' name='username' placeholder='User' aria-label='Search'>";
-            echo "<input class='form-control mr-sm-2' name='password' placeholder='Password' aria-label='Search'>";
+            echo "<input class='form-control mr-sm-2' name='password' type='password' placeholder='Password' aria-label='Search'>";
             echo "<button class='btn btn-outline-success my-2 my-sm-0' type='submit'>Login</button>"; 
           echo "</form>";
           echo "<button id='register' onclick='registerUser()'>Sign Up</button>";
