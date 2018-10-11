@@ -14,11 +14,6 @@
     <!-- CSS Files -->
     <link rel="stylesheet" href="css/style.css" type="text/css" title="Default">
 
-    <!-- JS Scripts-->
-    <script src="js/model.js"></script>
-    <script src="js/view.js"></script>
-    <script src="js/controller.js"></script>
-
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" 
     href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -28,6 +23,11 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- JS Scripts-->
+    <script src="js/model.js"></script>
+    <script src="js/view.js"></script>
+    <script src="js/controller.js"></script>
   </head>
   <body lang="en" onload="createButton();">
     <nav class="navbar navbar-dark bg-primary">
@@ -37,6 +37,7 @@
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button> 
       </form>
       <button id="register" onclick="registerUser()">Sign Up</button>
+      <a href="logout.php" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Logout</a>
     </nav>
     <h1>Hangman Game</h1>
     <div id="border">

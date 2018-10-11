@@ -34,6 +34,7 @@ function resetGame () {
   countWord();
 }
 
+// Redirects the user to the register.html
 function registerUser() {
   document.getElementById("register").onclick = function() {
     console.log("document");
