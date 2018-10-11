@@ -2,7 +2,7 @@
     session_start();
     require_once('mysqli_connect.php');
     include 'functions.php';
-  ?>
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -29,6 +29,14 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   <body lang="en" onload="createButton();">
+    <nav class="navbar navbar-dark bg-primary">
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" placeholder="User" aria-label="Search">
+        <input class="form-control mr-sm-2" placeholder="Password" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
+        <button class="btn btn-outline-success my-2 my-sm-0">Sign Up</button>
+      </form>
+    </nav>
     <h1>Hangman Game</h1>
     <div id="border">
       <div id="guess"></div>
