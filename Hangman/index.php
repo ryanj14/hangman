@@ -57,7 +57,34 @@
       <div class="move">
           <button id="reset" class="btn btn-primary" onclick="resetGame()">Reset</button>
       </div>
-    </div> 
+    </div>
+    <h3 class="leader">Leaderboard</h3> 
+    <table id="dicks" class="table">
+      <thead>
+        <tr>
+          <th scope="col">Rank</th>
+          <th scope="col">User</th>
+          <th scope="col">Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Larry</td>
+          <td>3</td>
+        </tr>
+      </tbody>
+    </table>
     <!-- JS Scripts-->
     <script src="js/init.js"></script>
   </body>
