@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    require_once('mysqli_connect.php');
+    include 'functions.php';
+  ?>
 <!DOCTYPE html>
 <html>
   <head>
