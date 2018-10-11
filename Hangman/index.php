@@ -2,6 +2,7 @@
     session_start();
     require_once('mysqli_connect.php');
     include 'functions.php';
+    echo $_SESSION['username'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -30,11 +31,10 @@
   </head>
   <body lang="en" onload="createButton();">
     <nav class="navbar navbar-dark bg-primary">
-      <form class="form-inline">
-        <input class="form-control mr-sm-2" placeholder="User" aria-label="Search">
-        <input class="form-control mr-sm-2" placeholder="Password" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
-        
+      <form class="form-inline" action="login.php" method="POST">
+        <input class="form-control mr-sm-2" name="username" placeholder="User" aria-label="Search">
+        <input class="form-control mr-sm-2" name="password" placeholder="Password" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button> 
       </form>
       <button id="register" onclick="registerUser()">Sign Up</button>
     </nav>
@@ -51,7 +51,6 @@
       <div class="move">
           <button id="reset" class="btn btn-primary" onclick="resetGame()">Reset</button>
       </div>
-      
     </div> 
     <!-- JS Scripts-->
     <script src="js/init.js"></script>
