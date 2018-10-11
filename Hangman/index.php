@@ -2,7 +2,6 @@
     session_start();
     require_once('mysqli_connect.php');
     include 'functions.php';
-    echo $_SESSION['username'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -31,13 +30,19 @@
   </head>
   <body lang="en" onload="createButton();">
     <nav class="navbar navbar-dark bg-primary">
-      <form class="form-inline" action="login.php" method="POST">
-        <input class="form-control mr-sm-2" name="username" placeholder="User" aria-label="Search">
-        <input class="form-control mr-sm-2" name="password" placeholder="Password" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button> 
-      </form>
-      <button id="register" onclick="registerUser()">Sign Up</button>
-      <a href="logout.php" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Logout</a>
+      <?php 
+        if(isset($_SESSION['username']) && !empty($_SESSION['username'])) {
+            echo "User: " . $_SESSION['username'] . " Score: " . $_SESSION['score'];
+            echo " <a href='logout.php' class='btn btn-secondary btn-lg active' role='button' aria-pressed='true'>Logout</a>";
+          } else {
+            echo "<form class='form-inline' action='login.php' method='POST'>";
+            echo "<input class='form-control mr-sm-2' name='username' placeholder='User' aria-label='Search'>";
+            echo "<input class='form-control mr-sm-2' name='password' placeholder='Password' aria-label='Search'>";
+            echo "<button class='btn btn-outline-success my-2 my-sm-0' type='submit'>Login</button>"; 
+          echo "</form>";
+          echo "<button id='register' onclick='registerUser()'>Sign Up</button>";
+          }
+      ?>
     </nav>
     <h1>Hangman Game</h1>
     <div id="border">

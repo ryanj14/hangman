@@ -40,17 +40,17 @@
         $count = mysqli_num_rows($results);
         if ($count == 1){
             $_SESSION['username'] = $username;
+            getScore($results);
         }else{
             echo "Invalid Login Credentials.";
             mysqli_close($link);
             die();
         }
     }
-    /*
-    if (isset($_SESSION['username'])){
-        $username = $_SESSION['username'];
-        echo "Hai " . $username . "";
-        echo "This is the Members Area";
-        echo "<a href='logout.php'>Logout</a>";  
-    } */
+
+    function getScore($results) {
+        $row = mysqli_fetch_assoc($results);
+        $_SESSION['score'] = $row['score'];
+        header('Location: index.php');
+    }
 ?>
