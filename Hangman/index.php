@@ -34,8 +34,9 @@
         <input class="form-control mr-sm-2" placeholder="User" aria-label="Search">
         <input class="form-control mr-sm-2" placeholder="Password" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button>
-        <button id="register" class="btn btn-outline-success my-2 my-sm-0" onclick="register()">Sign Up</button>
+        
       </form>
+      <button id="register" onclick="registerUser()">Sign Up</button>
     </nav>
     <h1>Hangman Game</h1>
     <div id="border">

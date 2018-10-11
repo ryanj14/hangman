@@ -35,8 +35,8 @@ function resetGame () {
 }
 
 function registerUser() {
-  x = document.getElementById("register");
-  x.onclick = function() {
+  document.getElementById("register").onclick = function() {
+    console.log("document");
     window.location.href = "register.html";
   }
 }
