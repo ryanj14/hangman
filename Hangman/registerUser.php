@@ -2,10 +2,13 @@
     require_once('mysqli_connect.php');
     require_once('functions.php');
 
-    if(isset($_GET['submit']) && !empty($_GET['submit'])) {
+    if(isset($_POST['Submit']) && !empty($_POST['Submit'])) {
         /* Establishing a connection to the database */
         $link = connect();
-        $query = "SELECT * FROM Hangman"; 
+        $query = "INSERT INTO Hangman 
+        (id, `user`, `pass`)
+      VALUES 
+        (NULL, ?, ?)";
         $user = $_POST["user"];
         $pass = $_POST["password"];
         userRegister($link, $query, $user, $pass);
@@ -38,4 +41,9 @@
             die();
         }
     }
+    /* 
+        session var for score
+        update session var each game
+        update dbs with new var if it's higher than previous score once user log out
+    */
 ?>
