@@ -33,3 +33,10 @@ function resetGame () {
   underscore();
   countWord();
 }
+
+function registerUser() {
+  x = document.getElementById("register");
+  x.onclick = function() {
+    window.location.href = "register.html";
+  }
+}
