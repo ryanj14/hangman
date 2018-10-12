@@ -14,6 +14,8 @@
         userRegister($link, $query, $user, $pass);
     } else {
         echo "isset broken";
+        echo $_POST["user"];
+        echo $_POST["password"];
         die();
     }
 

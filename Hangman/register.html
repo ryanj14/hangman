@@ -1,18 +1,46 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
     <title>Register</title>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css" type="text/css" title="Default">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" 
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- JS Scripts-->
+    <script src="js/model.js"></script>
+    <script src="js/view.js"></script>
+    <script src="js/controller.js"></script>
   </head>
   <body>
-    <form action="registerUser.php" method="POST">
-        User:<br>
-        <input type="text" name="user" placeholder="User">
-        <br>
-        Password:<br>
-        <input type="password" name="password" placeholder="password">
-        <br><br>
-        <input type="Submit" name="Submit" value="Submit">
-      </form> 
+    <h1 class="banner">Sign Up</h1>
+    <form class="yyy" action="registerUser.php" method="POST">
+      <div class="form-group row">
+        <label for="user-input" class="col-2 col-form-label">User</label>
+        <div class="col-10">
+          <input class="form-control" type="text" name="user" placeholder="User">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="password-input" class="col-2 col-form-label">Password</label>
+        <div class="col-10">
+          <input class="form-control" name="password" type="password">
+        </div>
+      </div>
+      <button type="Submit" name="Submit" value="Submit" class="btn btn-primary">Submit</button>
+    </form>
   </body>
 </html>
