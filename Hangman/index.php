@@ -68,21 +68,29 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>10</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>5</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Larry</td>
-          <td>3</td>
-        </tr>
+      <?php 
+        $link = connect();
+        $query = "SELECT * FROM Hangman LIMIT 10";
+        $counter = 1;
+    
+        /* create a prepared statement  */
+        if ($stmt = mysqli_prepare($link, $query)) { 
+            /* execute query */
+            mysqli_stmt_execute($stmt);
+            $results = mysqli_stmt_get_result($stmt);          
+        } else {
+            echo "Error with prepare statement!\n";
+            mysqli_close($list);
+            die();
+        } 
+        while($row = mysqli_fetch_assoc($results)) {
+          echo "<tr>";
+            echo "<th scope='row'>". $counter++ . "</th>";
+            echo "<td>" . $row['user'] . "</td>";
+            echo "<td>" . $row['score'] . "</td>";
+          echo "</tr>";
+        }
+      ?>
       </tbody>
     </table>
     <!-- JS Scripts-->
