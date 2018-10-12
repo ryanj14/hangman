@@ -24,6 +24,7 @@ function resetGame () {
   }
   lives = 7;
   score();
+  document.getElementById('myField').value = counter;
   rand = listWord[Math.floor(Math.random() * listWord.length)];
   randLength = rand.length;
   document.getElementById("guess").innerHTML = "Guess the word, it's " + randLength + " letters long";

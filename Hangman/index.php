@@ -33,14 +33,18 @@
       <?php 
         if(isset($_SESSION['username']) && !empty($_SESSION['username'])) {
             echo "User: " . $_SESSION['username'] . " Score: " . $_SESSION['score'];
-            echo " <a href='logout.php' class='btn btn-secondary btn-lg active' role='button' aria-pressed='true'>Logout</a>";
+            echo "<form class='form-inline' action='logout.php' method='POST'>";
+              echo "<input type='hidden' name='score' id='myField' value='0' />";
+              echo "<button class='btn btn-outline-success my-2 my-sm-0' name='logout' type='Submit'>Logout</button>";  
+            echo "</form>";
           } else {
             echo "<form class='form-inline' action='login.php' method='POST'>";
-            echo "<input class='form-control mr-sm-2' name='username' placeholder='User' aria-label='Search'>";
-            echo "<input class='form-control mr-sm-2' name='password' type='password' placeholder='Password' aria-label='Search'>";
-            echo "<button class='btn btn-outline-success my-2 my-sm-0' type='submit'>Login</button>"; 
-          echo "</form>";
-          echo " <a href='register.php' class='btn btn-secondary btn-lg active' role='button' aria-pressed='true'>Sign Up</a>";
+              echo "<input class='form-control mr-sm-2' name='username' placeholder='User' aria-label='Search'>";
+              echo "<input class='form-control mr-sm-2' name='password' type='password' placeholder='Password' aria-label='Search'>";
+              echo "<input type='hidden' name='score' id='myField' value='0' />";
+              echo "<button class='btn btn-outline-success my-2 my-sm-0' type='submit'>Login</button>"; 
+            echo "</form>";
+            echo " <a href='register.php' class='btn btn-secondary btn-lg active' role='button' aria-pressed='true'>Sign Up</a>";
           }
       ?>
     </nav>
@@ -90,6 +94,7 @@
             echo "<td>" . $row['score'] . "</td>";
           echo "</tr>";
         }
+        mysqli_close($link);
       ?>
       </tbody>
     </table>
