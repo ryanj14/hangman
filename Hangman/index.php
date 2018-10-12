@@ -40,7 +40,7 @@
             echo "<input class='form-control mr-sm-2' name='password' type='password' placeholder='Password' aria-label='Search'>";
             echo "<button class='btn btn-outline-success my-2 my-sm-0' type='submit'>Login</button>"; 
           echo "</form>";
-          echo "<button id='register' onclick='registerUser()'>Sign Up</button>";
+          echo " <a href='register.php' class='btn btn-secondary btn-lg active' role='button' aria-pressed='true'>Sign Up</a>";
           }
       ?>
     </nav>
