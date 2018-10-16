@@ -42,8 +42,7 @@
             $_SESSION['username'] = $username;
             getScore($results);
         }else{
-            echo "Invalid Login Credentials.";
-            mysqli_close($link);
+            header('Location: index.php');
             die();
         }
     }

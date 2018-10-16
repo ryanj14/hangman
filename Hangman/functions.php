@@ -23,4 +23,8 @@ function sqlCheck($list, $sql){
         mysqli_close($list);
     }
 }
+
+function setError() {
+    $error = "Wrong login error";
+}
 ?>
