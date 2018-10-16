@@ -82,7 +82,7 @@
       <tbody>
       <?php 
         $link = connect();
-        $query = "SELECT * FROM Hangman LIMIT 10";
+        $query = "SELECT * FROM Hangman ORDER BY score DESC LIMIT 10";
         $counter = 1;
     
         /* create a prepared statement  */
