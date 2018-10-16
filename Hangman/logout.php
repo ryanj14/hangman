@@ -10,6 +10,7 @@
     }
 
     function updateScore() {
+        // check to see if dbs score is higher than current score
         $updateScore = $_POST['score'];
         $score = $_SESSION['score'];
         $user = $_SESSION['username'];

@@ -1,4 +1,5 @@
-var counter = 0;
+var ggg = document.getElementById('plzwork');
+var counter =  ggg.value;
 var wordLength = 0;
 var defPoint;
 var lives = 7;

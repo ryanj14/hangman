@@ -24,7 +24,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!-- JS Scripts-->
-    <script src="js/model.js"></script>
+    
     <script src="js/view.js"></script>
     <script src="js/controller.js"></script>
   </head>
@@ -53,7 +53,15 @@
       <div id="guess"></div>
       <div id="def"></div>
       <div id="wrap">
-        <h2>Score:<div id="score">0</div></h2>
+        <h2>Score:<div id="score">
+          <?php 
+            if(isset($_SESSION['score'])) {
+              echo "<input type='hidden' name='muchsuck' id='plzwork' value=' " . $_SESSION['score'] . "'/>";
+            } else {
+              echo "<input type='hidden' name='muchsuck' id='plzwork' value='0' />";
+            }
+          ?>
+        </div></h2>
         <h2>Lives:<div id="lives">7</div></h2>
       </div>
       <h2><div id="word"></div></h2>
@@ -99,6 +107,7 @@
       </tbody>
     </table>
     <!-- JS Scripts-->
+    <script src="js/model.js"></script>
     <script src="js/init.js"></script>
   </body>
 </html>
