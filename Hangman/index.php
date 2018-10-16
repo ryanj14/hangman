@@ -56,9 +56,9 @@
         <h2>Score:<div id="score">
           <?php 
             if(isset($_SESSION['score'])) {
-              echo "<input type='hidden' name='muchsuck' id='plzwork' value=' " . $_SESSION['score'] . "'/>";
+              echo "<input type='hidden' id='scoreBoard' value=' " . $_SESSION['score'] . "'/>";
             } else {
-              echo "<input type='hidden' name='muchsuck' id='plzwork' value='0' />";
+              echo "<input type='hidden' id='scoreBoard' value='0' />";
             }
           ?>
         </div></h2>
@@ -71,7 +71,7 @@
       </div>
     </div>
     <h3 class="leader">Leaderboard</h3> 
-    <table id="dicks" class="table">
+    <table id="rankTable" class="table">
       <thead>
         <tr>
           <th scope="col">Rank</th>

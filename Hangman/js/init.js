@@ -9,7 +9,7 @@ function init() {
 }
 
 function initScore() {
-  let score = document.getElementById("plzwork").value;
+  let score = document.getElementById("scoreBoard").value;
   document.getElementById("score").innerHTML = score;
 }
 

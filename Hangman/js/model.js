@@ -1,4 +1,4 @@
-var ggg = document.getElementById('plzwork');
+var ggg = document.getElementById('scoreBoard');
 var counter =  ggg.value;
 var wordLength = 0;
 var defPoint;
