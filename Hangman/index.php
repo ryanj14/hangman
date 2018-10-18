@@ -24,7 +24,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!-- JS Scripts-->
-    
     <script src="js/view.js"></script>
     <script src="js/controller.js"></script>
   </head>
@@ -32,9 +31,9 @@
     <nav class="navbar navbar-dark bg-primary">
       <?php 
         if(isset($_SESSION['username']) && !empty($_SESSION['username'])) {
-            echo "User: " . $_SESSION['username'] . " Score: " . $_SESSION['score'];
+            echo "User: " . $_SESSION['username'] . " Score: <p id='jjj'>" . $_SESSION['score'] . "</p>";
             echo "<form class='form-inline' action='logout.php' method='POST'>";
-              echo "<input type='hidden' name='score' id='myField' value='0' />";
+              echo "<input type='hidden' name='score' id='myField' value='" . $_SESSION['score'] . "' />";
               echo "<button class='btn btn-outline-success my-2 my-sm-0' name='logout' type='Submit'>Logout</button>";  
             echo "</form>";
           } else {

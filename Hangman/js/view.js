@@ -77,8 +77,11 @@ function message() {
 
 // Updates the score
 function score() {
-  var x = document.getElementById("score");
+  let z = document.getElementById("jjj");
+  let x = document.getElementById("score");
   var y = document.getElementById("lives");
+  z.value = counter;
+  z.innerHTML = counter;
   x.innerHTML = counter;
   y.innerHTML = lives;
 }
