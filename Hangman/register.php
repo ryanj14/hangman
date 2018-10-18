@@ -37,13 +37,13 @@
       <div class="form-group row">
         <label for="user-input" class="col-2 col-form-label">User</label>
         <div class="col-10">
-          <input class="form-control" type="text" name="user" placeholder="User">
+          <input class="form-control" type="text" name="user" placeholder="User" required>
         </div>
       </div>
       <div class="form-group row">
         <label for="password-input" class="col-2 col-form-label">Password</label>
         <div class="col-10">
-          <input class="form-control" name="password" type="password">
+          <input class="form-control" name="password" type="password" required>
         </div>
       </div>
       <button type="Submit" name="Submit" value="Submit" class="btn btn-primary">Submit</button>

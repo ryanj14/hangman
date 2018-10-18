@@ -39,8 +39,8 @@
             echo "</form>";
           } else {
             echo "<form class='form-inline' action='login.php' method='POST'>";
-              echo "<input class='form-control mr-sm-2' name='username' placeholder='User' aria-label='Search'>";
-              echo "<input class='form-control mr-sm-2' name='password' type='password' placeholder='Password' aria-label='Search'>";
+              echo "<input class='form-control mr-sm-2' name='username' placeholder='User' aria-label='Search' required>";
+              echo "<input class='form-control mr-sm-2' name='password' type='password' placeholder='Password' aria-label='Search' required>";
               echo "<input type='hidden' name='score' id='myField' value='0' />";
               echo "<button class='btn btn-outline-success my-2 my-sm-0' type='submit'>Login</button>"; 
             echo "</form>";
