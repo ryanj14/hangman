@@ -1,5 +1,5 @@
 // Creates the buttons using JS
-function createButton() {
+window.onload = function createButton() {
   for (var i = 0; i < listAlpha.length; i++) {  
     var btn = document.createElement("button");
     btn.id = i;

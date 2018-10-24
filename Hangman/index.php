@@ -23,11 +23,8 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <!-- JS Scripts-->
-    <script src="js/view.js"></script>
-    <script src="js/controller.js"></script>
   </head>
-  <body lang="en" onload="createButton();">
+  <body lang="en">
   <!--
     <nav class="navbar navbar-dark bg-primary">
     <?php 
@@ -134,6 +131,8 @@
       </tbody>
     </table>
     <!-- JS Scripts-->
+    <script src="js/controller.js"></script>
+    <script src="js/view.js"></script>
     <script src="js/model.js"></script>
     <script src="js/init.js"></script>
   </body>
