@@ -28,8 +28,9 @@
     <script src="js/controller.js"></script>
   </head>
   <body lang="en" onload="createButton();">
+  <!--
     <nav class="navbar navbar-dark bg-primary">
-      <?php 
+    <?php 
         if(isset($_SESSION['username']) && !empty($_SESSION['username'])) {
             echo "User: " . $_SESSION['username'] . " Score: <p id='jjj'>" . $_SESSION['score'] . "</p>";
             echo "<form class='form-inline' action='logout.php' method='POST'>";
@@ -46,6 +47,33 @@
             echo " <a href='register.php' class='btn btn-secondary btn-lg active' role='button' aria-pressed='true'>Sign Up</a>";
           }
       ?>
+    </nav> -->
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.php">Hangman</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+        <?php 
+          if(isset($_SESSION['username']) && !empty($_SESSION['username'])) {
+            echo "<li id='wrapper'>User: " . $_SESSION['username'] . " Score: <div id='jjj'> {$_SESSION['score']}</div></li>";
+            echo "<form class='navbar-form navbar-left' action='logout.php' method='POST'>";
+              echo "<input type='hidden' name='score' id='myField' value='" . $_SESSION['score'] . "' />";
+              echo "<li><button class='btn btn-default' name='logout' type='submit'><span class='glyphicon glyphicon-log-in'></span> Sign Out</button></li>";
+            echo "</form>";
+          } else {
+            echo "<li><a href='register.php'><span class='glyphicon glyphicon-user'></span> Sign Up</a></li>";
+            echo "<form class='navbar-form navbar-left' action='login.php' method='POST'>";
+              echo "<div class='form-group'>";
+                echo "<input type='text' class='form-control' name='username' placeholder='User' required>";
+                echo "<input type='password' class='form-control' name='password' placeholder='Password' required>";
+              echo "</div>";
+              echo "<button type='submit' class='btn btn-default'>Login</button>";
+            echo "</form>";
+          }
+        ?>
+        </ul>
+      </div>
     </nav>
     <h1>Hangman Game</h1>
     <div id="border">

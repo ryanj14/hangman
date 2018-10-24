@@ -35,6 +35,12 @@ h2 {
   text-align: center;
 }
 
+#wrapper {
+  display: flex;
+  padding-top: 15px;
+  color: #9d9d9d;
+}
+
 #rowButtons {
   width: 90%;
   margin-top: 5%;
@@ -84,4 +90,14 @@ button {
   width: 50%;
   margin-right: auto;
   margin-left: auto;  
+}
+
+@media only screen and (max-width: 768px) {
+  #border {
+    height: 700px;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    border: 2px solid red;
+  }
 }
