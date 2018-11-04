@@ -59,6 +59,7 @@
               echo "<li><button class='btn btn-default' name='logout' type='submit'><span class='glyphicon glyphicon-log-in'></span> Sign Out</button></li>";
             echo "</form>";
           } else {
+            echo "<li id='wrapper'>Score: <div id='jjj'>0</div></li>";
             echo "<li><a href='register.php'><span class='glyphicon glyphicon-user'></span> Sign Up</a></li>";
             echo "<form class='navbar-form navbar-left' action='login.php' method='POST'>";
               echo "<div class='form-group'>";

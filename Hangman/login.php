@@ -13,8 +13,6 @@
     }
 
     function connectionTest($username, $password, $query) {
-        echo $username . "<br>";
-        echo $password . "<br>";
         $link = connect();
         /* create a prepared statement  */
         if ($stmt = mysqli_prepare($link, $query)) {
