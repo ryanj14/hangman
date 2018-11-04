@@ -1,5 +1,5 @@
 // Checks the users button guess
-function checkGuess(btn, letter) {
+checkGuess = (btn, letter) => {
   if(checkWord(letter, btn) == false) {
     counter--;
     lives--;
@@ -15,7 +15,7 @@ function checkGuess(btn, letter) {
 }
 
 // Resests the hang man game
-function resetGame () { 
+resetGame = () => { 
   strTest = " ";
   strWhite = " ";
   wordLength = 0;

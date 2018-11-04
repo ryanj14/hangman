@@ -1,5 +1,5 @@
 // Creates the buttons using JS
-window.onload = function createButton() {
+window.onload = createButton = () => {
   for (var i = 0; i < listAlpha.length; i++) {  
     var btn = document.createElement("button");
     btn.id = i;
@@ -14,7 +14,7 @@ window.onload = function createButton() {
 }
 
 // enables all the alphabet buttons
-function enableButtons() {
+enableButtons = () => {
   for (var i = 0; i < listAlpha.length; i++) { 
     var num = i.toString();
     document.getElementById(num).disabled = false;
@@ -22,7 +22,7 @@ function enableButtons() {
 }
 
 // Disables all the alphabet buttons
-function disableButtons() {
+disableButtons = () => {
   for (var i = 0; i < listAlpha.length; i++) { 
     var num = i.toString();
     document.getElementById(num).disabled = true;
@@ -30,7 +30,7 @@ function disableButtons() {
 }
 
 // Replaces the underscore with the correct letter
-function replace(letter) {
+replace = (letter) => {
   for(var i = 0; i < strWhite.length; i++) {
       if(strWhite[i] == letter) {
         counter++;
@@ -41,7 +41,7 @@ function replace(letter) {
 }
 
 // Checks the letter button with the word
-function checkWord(letter, idNum) {
+checkWord = (letter, idNum) => {
   var num = idNum.toString();
   for(var i = 0; i < rand.length; i++) {
     if(rand.indexOf(letter) > -1) {
@@ -54,7 +54,7 @@ function checkWord(letter, idNum) {
 }
 
 // Initializes the definitions for the random word
-function initDef() {
+initDef = () => {
   for(var h = 0; h < listWord.length; h++) {
     if(rand == listWord[h]) {
       defPoint = h;
@@ -64,7 +64,7 @@ function initDef() {
 }
 
 // Changes the guess div with the win/loose message
-function message() {
+message = () => {
   if(lives == 0) {
     document.getElementById("guess").innerHTML = "You loose!";
     disableButtons();
@@ -76,7 +76,7 @@ function message() {
 }
 
 // Updates the score
-function score() {
+score = () => {
   let z = document.getElementById("jjj");
   let x = document.getElementById("score");
   var y = document.getElementById("lives");

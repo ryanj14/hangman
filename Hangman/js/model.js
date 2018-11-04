@@ -36,19 +36,19 @@ var listAlpha = [
   ,'v', 'w', 'x', 'y', 'z']; 
 
 // Adds spaces between each character
-function underWord() {
+underWord = () => {
   for(var i = 0; i < rand.length; i++) {
     strWhite += rand.charAt(i) + ' ';
   }
 }
 
 // Replaces the character at the specified index in the string with the replacement letter
-function replaceAt(string, index, replace) {
+replaceAt = (string, index, replace) => {
   return string.substring(0, index) + replace + string.substring(index + 1);
 }
 
  // Counts the number of unique characters in the string
- function countWord() {
+countWord = () => {
   var test = "";
   for(var i =0; i < rand.length; i ++) {
     if(test.indexOf(rand.charAt(i))==-1) {
@@ -61,7 +61,7 @@ function replaceAt(string, index, replace) {
 }
 
 // Creates the blank string with underscore corresponding to the random word's length
-function underscore() {
+underscore = () => {
   var whiteSpace = randLength + 1;
   var totalLength = whiteSpace + randLength;
   for(var i = 0; i < totalLength; i++) {
