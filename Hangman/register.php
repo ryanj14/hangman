@@ -28,7 +28,7 @@
   </head>
   <body>
     <h1 class="banner">Sign Up</h1>
-    <form class="yyy" action="registerUser.php" method="POST">
+    <form class="yyy" action="php/registerUser.php" method="POST">
       <div class="form-group row">
         <label for="user-input" class="col-2 col-form-label">User</label>
         <div class="col-10">

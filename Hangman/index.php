@@ -1,7 +1,7 @@
 <?php
     session_start();
-    require_once('mysqli_connect.php');
-    include 'functions.php';
+    require_once('./php/mysqli_connect.php');
+    include './php/functions.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -35,14 +35,14 @@
         <?php 
           if(isset($_SESSION['username']) && !empty($_SESSION['username'])) {
             echo "<li id='wrapper'>User: " . $_SESSION['username'] . " Score: <div id='jjj'> {$_SESSION['score']}</div></li>";
-            echo "<form class='navbar-form navbar-left' action='logout.php' method='POST'>";
+            echo "<form class='navbar-form navbar-left' action='php/logout.php' method='POST'>";
               echo "<input type='hidden' name='score' id='myField' value='" . $_SESSION['score'] . "' />";
               echo "<li><button class='btn btn-default' name='logout' type='submit'><span class='glyphicon glyphicon-log-in'></span> Sign Out</button></li>";
             echo "</form>";
           } else {
             echo "<li id='wrapper'>Score: <div id='jjj'>0</div></li>";
             echo "<li><a href='register.php'><span class='glyphicon glyphicon-user'></span> Sign Up</a></li>";
-            echo "<form class='navbar-form navbar-left' action='login.php' method='POST'>";
+            echo "<form class='navbar-form navbar-left' action='php/login.php' method='POST'>";
               echo "<div class='form-group'>";
                 echo "<input type='text' class='form-control' name='username' placeholder='User' required>";
                 echo "<input type='password' class='form-control' name='password' placeholder='Password' required>";

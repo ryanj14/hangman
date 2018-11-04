@@ -39,6 +39,6 @@
     function killSession($link) {
         session_destroy();
         mysqli_close($link);
-        header('Location: index.php');
+        header('Location: ../index.php');
     }
 ?>

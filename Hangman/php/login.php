@@ -48,6 +48,6 @@
     function getScore($results) {
         $row = mysqli_fetch_assoc($results);
         $_SESSION['score'] = $row['score'];
-        header('Location: index.php');
+        header('Location: ../index.php');
     }
 ?>

@@ -35,7 +35,7 @@
             /* Closing connection to the database */
             mysqli_close($link);
 
-            header("Location: index.php");
+            header("Location: ../index.php");
             die();
         } else {
             echo "Error with prepare statement!\n";
