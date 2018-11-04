@@ -81,8 +81,8 @@ score = () => {
   var z = document.getElementById("myField");
   let x = document.getElementById("score");
   var y = document.getElementById("lives");
-  console.log(z.value)
   v.value = counter;
+  x.value = counter;
   z.value = counter;
   v.innerHTML = counter;
   z.innerHTML = counter;
