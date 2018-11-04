@@ -25,26 +25,7 @@
 
   </head>
   <body lang="en">
-  <!--
-    <nav class="navbar navbar-dark bg-primary">
-    <?php 
-        if(isset($_SESSION['username']) && !empty($_SESSION['username'])) {
-            echo "User: " . $_SESSION['username'] . " Score: <p id='jjj'>" . $_SESSION['score'] . "</p>";
-            echo "<form class='form-inline' action='logout.php' method='POST'>";
-              echo "<input type='hidden' name='score' id='myField' value='" . $_SESSION['score'] . "' />";
-              echo "<button class='btn btn-outline-success my-2 my-sm-0' name='logout' type='Submit'>Logout</button>";  
-            echo "</form>";
-          } else {
-            echo "<form class='form-inline' action='login.php' method='POST'>";
-              echo "<input class='form-control mr-sm-2' name='username' placeholder='User' aria-label='Search' required>";
-              echo "<input class='form-control mr-sm-2' name='password' type='password' placeholder='Password' aria-label='Search' required>";
-              echo "<input type='hidden' name='score' id='myField' value='0' />";
-              echo "<button class='btn btn-outline-success my-2 my-sm-0' type='submit'>Login</button>"; 
-            echo "</form>";
-            echo " <a href='register.php' class='btn btn-secondary btn-lg active' role='button' aria-pressed='true'>Sign Up</a>";
-          }
-      ?>
-    </nav> -->
+
     <nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -65,6 +46,7 @@
               echo "<div class='form-group'>";
                 echo "<input type='text' class='form-control' name='username' placeholder='User' required>";
                 echo "<input type='password' class='form-control' name='password' placeholder='Password' required>";
+                echo "<input type='hidden' name='score' id='myField' value='0'/>";
               echo "</div>";
               echo "<button type='submit' class='btn btn-default'>Login</button>";
             echo "</form>";
@@ -83,6 +65,7 @@
             if(isset($_SESSION['score'])) {
               echo "<input type='hidden' id='scoreBoard' value=' " . $_SESSION['score'] . "'/>";
             } else {
+              
               echo "<input type='hidden' id='scoreBoard' value='0' />";
             }
           ?>

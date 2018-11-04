@@ -77,10 +77,14 @@ message = () => {
 
 // Updates the score
 score = () => {
-  let z = document.getElementById("jjj");
+  let v = document.getElementById("jjj");
+  var z = document.getElementById("myField");
   let x = document.getElementById("score");
   var y = document.getElementById("lives");
+  console.log(z.value)
+  v.value = counter;
   z.value = counter;
+  v.innerHTML = counter;
   z.innerHTML = counter;
   x.innerHTML = counter;
   y.innerHTML = lives;
