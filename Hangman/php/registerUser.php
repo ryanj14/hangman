@@ -10,7 +10,7 @@
       VALUES 
         (NULL, ?, ?)";
         $user = $_POST["user"];
-        $pass = $_POST["password"];
+        $pass = password_hash($_POST["password"], PASSWORD_DEFAULT);
         userRegister($link, $query, $user, $pass);
     } else {
         echo "isset broken";
@@ -43,9 +43,4 @@
             die();
         }
     }
-    /* 
-        session var for score
-        update session var each game
-        update dbs with new var if it's higher than previous score once user log out
-    */
 ?>

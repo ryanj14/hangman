@@ -7,7 +7,7 @@
         $username = $_POST['username'];
         $password = $_POST['password'];
         
-        $query = "SELECT * FROM Hangman WHERE user = ? AND pass = ?";
+        $query = "SELECT * FROM Hangman WHERE user = ?";
         
         connectionTest($username, $password, $query);
     }
@@ -18,14 +18,14 @@
         if ($stmt = mysqli_prepare($link, $query)) {
 
             /* bind parameters for markers */
-            mysqli_stmt_bind_param($stmt, "ss", $username, $password);
+            mysqli_stmt_bind_param($stmt, "s", $username);
 
             /* execute query */
             mysqli_stmt_execute($stmt);
 
             $results = mysqli_stmt_get_result($stmt);
 
-            countRows($results, $username);
+            countRows($results, $username, $password);
             //$row = mysqli_fetch_assoc($results);
         } else {
             echo "Error with prepare statement!\n";
@@ -34,15 +34,16 @@
         } 
     }
 
-    function countRows($results, $username) {
-        $count = mysqli_num_rows($results);
-        if ($count == 1){
-            $_SESSION['username'] = $username;
-            getScore($results);
-        }else{
-            header('Location: index.php');
-            die();
+    function countRows($results, $username, $password) {
+        while ($row = mysqli_fetch_assoc($results)){
+            if(password_verify($password, $row['pass'])){
+                $_SESSION['username'] = $username;
+                $_SESSION['score'] = $row['score'];
+                header('Location: ../index.php');
+            }      
         }
+        header('Location: ../index.php');
+        die();
     }
 
     function getScore($results) {
