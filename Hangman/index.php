@@ -4,11 +4,14 @@
     include './php/functions.php';
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="Description" content="Hangman game with leaderboard">
+
+    <title>Hangman</title>
 
     <!-- CSS Files -->
     <link rel="stylesheet" href="css/style.css" type="text/css" title="Default">
@@ -22,10 +25,8 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
   </head>
   <body lang="en">
-
     <nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -115,9 +116,9 @@
       </tbody>
     </table>
     <!-- JS Scripts-->
-    <script src="js/controller.js"></script>
-    <script src="js/view.js"></script>
-    <script src="js/model.js"></script>
-    <script src="js/init.js"></script>
+    <script src="./js/controller.js"></script>
+    <script src="./js/view.js"></script>
+    <script src="./js/model.js"></script>
+    <script src="./js/init.js"></script>
   </body>
 </html>
