@@ -22,9 +22,6 @@
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   <body lang="en">
     <nav class="navbar navbar-inverse">
@@ -45,8 +42,8 @@
             echo "<li><a href='register.php'><span class='glyphicon glyphicon-user'></span> Sign Up</a></li>";
             echo "<form class='navbar-form navbar-left' action='php/login.php' method='POST'>";
               echo "<div class='form-group'>";
-                echo "<input type='text' class='form-control' name='username' placeholder='User' required>";
-                echo "<input type='password' class='form-control' name='password' placeholder='Password' required>";
+                echo "<input type='text' aria-label='Close' class='form-control' name='username' placeholder='User' required>";
+                echo "<input type='password' aria-label='Close' class='form-control' name='password' placeholder='Password' required>";
                 echo "<input type='hidden' name='score' id='myField' value='0'/>";
               echo "</div>";
               echo "<button type='submit' class='btn btn-default'>Login</button>";
